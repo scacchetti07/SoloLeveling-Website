@@ -8,10 +8,10 @@
 :root {
     --color-light: #f1f1f1;
     --color-dark: #333333;
-    --color-blue-100: rgb(41, 90, 196);
+    --color-blue-100: rgb(31, 102, 235);
     --color-blue-800: rgb(4, 7, 42);
     --radius: 8px;
-    --gradient: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .3));
+    --gradient: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .45));
 }
 
 html {
@@ -42,6 +42,9 @@ img {
     max-width: 100%;
 }
 
+
+
+/* Começo do Hero */
 .hero {
     width: 100%;
     min-height: 100dvh;
@@ -51,9 +54,9 @@ img {
     background-size: cover;
     background-position: 50%;
     color: var(--color-light);
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: space-between; */
+    justify-content: space-between;
 }
 
 .header {
@@ -96,3 +99,15 @@ span {
     border-radius: var(--radius);
     transition: .5s; /* Animação para que quando o menu for clicado, tenha a animação na barra */
 }
+
+.header-footer h1 {
+    /* px não é legal pensando no responsivo pois quando definido em pixels ele é fixo. */
+    /* vmax => medida baseada na viewport */
+    font-size: clamp(4.5rem, 8vmax, 10rem); /* clamp(min, ideal, max) => Você define 3 possíveis valores 1 min, 1 ideal e outro máximo. */
+}
+.header-footer p {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-left: .5rem;
+}
+/* Final do Hero */
