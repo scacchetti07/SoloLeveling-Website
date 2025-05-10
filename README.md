@@ -3,6 +3,8 @@ O site foi desenvolvido utilziando da obra coreana Solo leveling e suas caracter
 
 É possível acessar com o github pages ao lado direito do repositório!
 
+### [Paleta de cor utilizada](https://color.adobe.com/pt/-leveling-color-theme-19902787/)
+
 # Respositório original do Professor
 Repositório modelo => [Repositório](https://github.com/web-dev-fiap/oficina-front-2025)
 
