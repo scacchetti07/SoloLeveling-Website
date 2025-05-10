@@ -8,10 +8,10 @@
 
 /* Variáveis de cores em CSS */
 :root {
-    --color-light: #f1f1f1;
-    --color-dark: #333333;
-    --color-blue-100: rgb(35, 88, 185);
-    --color-blue-800: rgb(4, 7, 42);
+    --color-light: #F2F2F2;
+    --color-dark: #221426;
+    --color-blue-100: #445EF2;
+    --color-blue-800: #1D1340;
     --radius: 8px;
     --gradient: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .45));
     --transition: .5s;
@@ -45,7 +45,6 @@ img {
     display: block;
     max-width: 100%;
 }
-
 
 
 /* Começo do Hero */
