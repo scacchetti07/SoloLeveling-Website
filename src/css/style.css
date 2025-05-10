@@ -14,6 +14,7 @@
     --color-blue-800: rgb(4, 7, 42);
     --radius: 8px;
     --gradient: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .45));
+    --transition: .5s;
 }
 
 html {
@@ -29,7 +30,7 @@ a {
     text-decoration: none;
     color: var(--color-light);
     font-weight: 600;
-    transition: color .5;   
+    transition: color var(--transition);   
 }
 
 a:hover {
@@ -100,7 +101,7 @@ span {
     background-color: var(--color-light);
     margin: .5rem auto;
     border-radius: var(--radius);
-    transition: .5s; /* Animação para que quando o menu for clicado, tenha a animação na barra */
+    transition: var(--transition); /* Animação para que quando o menu for clicado, tenha a animação na barra */
 }
 
 .header-footer h1 {
@@ -114,3 +115,58 @@ span {
     margin-left: .5rem;
 }
 /* Final do Hero */
+
+/* Motivations */
+
+.container {
+    padding: 1rem 4rem;
+    margin-top: 3rem;
+}
+
+.titles {
+    font-size: 4.5rem;
+    width: 60%;
+}
+
+.motiva-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* boa prática para que ele sempre quebre quando ultrapassar o tamanho definido*/
+}
+
+.motiva-grid-item {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.motiva-grid-item img {
+    border-radius: var(--radius);
+    filter: grayscale(1);
+    width: 80%;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.motiva-grid-item:hover  img{
+    filter: grayscale(0);
+    scale: 1.05;
+}
+
+.motiva-grid-item p {
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.motiva-grid-item:hover p {
+    letter-spacing: 3px;
+}
+
+/* Final da Motivação */
