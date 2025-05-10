@@ -169,3 +169,30 @@ span {
 }
 
 /* Final da Motivação */
+
+/* Começo do sistema */
+
+.system-gallery {
+    columns: 3 300px;
+
+}
+
+.system-gallery img {
+    padding: .5rem 0;
+    border-radius: var(--radius);
+    animation: gridAnimation both;
+    animation-timeline: view(70% 5%);
+}
+
+/* Animações */
+@keyframes gridAnimation {
+    /* Define de onde ela começa e de onde ela termina */
+    from {
+        opacity: 0;
+        scale: .7;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
