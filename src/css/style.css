@@ -203,7 +203,7 @@ span {
 
 /* Modal */
 .modal-container{
-    display: block;
+    display: none;
     position:fixed;
     width: 100%;
     height: 100%;
@@ -267,6 +267,12 @@ span {
 
     body {
         overflow-x: hidden;
+    }
+
+    .titles {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        width: 100%;
     }
 
     .sanduiche {

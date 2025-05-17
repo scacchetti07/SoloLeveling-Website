@@ -46,3 +46,40 @@ function slideshow() {
     setTimeout(slideshow, tempo);
 }
 slideshow();
+
+// Evento que que carrega a pagina antes de ser analisado pelo css
+
+document.addEventListener('DOMContentLoaded', () => {
+    const gridItems = document.querySelectorAll('.motiva-grid-item'); // Pega todos com a classe especificada
+    const modalContainer = document.getElementById('modal-container');
+    const modalImage = document.getElementById('modal-image');
+    const modalTexto = document.getElementById('modal-text');
+    const closeButton = document.querySelector('.close-btn');
+
+    gridItems.forEach((item) => {
+        const link = item.querySelector('a');
+        link?.addEventListener('click', e => {
+            e.preventDefault(); // impedir que o link navegue antes de executar
+            const img = item.querySelector('img');
+            const text = item.querySelector('p');
+
+            if (img && text) {
+                modalImage.src = img.src;
+                modalImage.alt = img.alt;
+                modalTexto.textContent = text.textContent;
+                modalContainer.style.display = 'flex'; // exibe a modal
+            }
+        })
+    });
+
+    const closeModal = () => {
+        modalContainer.style.display = 'none';
+    }
+    closeButton.addEventListener("click", closeModal);
+    
+    window.addEventListener('click', (e) => {
+        if (e.target === modalContainer) {
+            closeModal();
+        }
+    })
+})
