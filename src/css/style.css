@@ -13,7 +13,7 @@
     --color-blue-100: #445EF2;
     --color-blue-800: #1D1340;
     --radius: 8px;
-    --gradient: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .45));
+    --gradient: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .50));
     --transition: .5s;
 }
 
@@ -52,7 +52,7 @@ img {
     width: 100%;
     min-height: 100dvh;
     padding: 3rem;
-    background-image: var(--gradient), url(../assets/sung_bg.jpg);
+    /* background-image: var(--gradient), url(../assets/banners/banner1.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
@@ -60,6 +60,10 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.banner #image {
+    width: 100%;
 }
 
 .header {

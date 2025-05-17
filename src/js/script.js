@@ -18,3 +18,31 @@ headerMenu.addEventListener('click', (event) => {
         toggleMenu();
     }
 });
+
+// Declarando um Array de imagens
+const banners = [
+    './src/assets/banners/banner1.jpg',
+    './src/assets/banners/banner2.jpeg',
+    './src/assets/banners/banner3.jpg',
+    './src/assets/banners/banner4.png',
+];
+
+// Declarando as variáveis
+let i = 0; // Index
+const tempo = 3000; // Tempo entre troca das imagens
+const hero = document.querySelector(".hero");
+
+// Criando a função do slideshow
+
+function slideshow() {
+    if (hero) {
+        hero.style.backgroundImage = `var(--gradient), url(${banners[i]})`;
+    }
+
+    i++;
+    if (i == banners.length) {
+        i = 0;
+    }
+    setTimeout(slideshow, tempo);
+}
+slideshow();
